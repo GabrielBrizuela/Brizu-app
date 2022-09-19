@@ -17,13 +17,15 @@ const NavBar = () => (
                 <NavLink className="nav-link link_header" to='/'>Contacto</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link link_header" to='/category/:id%20bidon'>Bidones</NavLink>
+                <NavLink className="nav-link link_header" to='/category/bidon'>Bidones</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link link_header" to='/category/:id%20sifon'>Sifones</NavLink>
+                <NavLink className="nav-link link_header" to='/category/sifon'>Sifones</NavLink>
             </li>
-            <button type="button" className="btn btn-outline-secondary">
-            <CartWidget /></button>
+            <NavLink button type="button" className="btn btn-outline-secondary" to='/cart'>
+             <CartWidget />   
+            </NavLink>
+                       
         </ul>
     </div>
 

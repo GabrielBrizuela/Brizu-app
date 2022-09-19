@@ -6,21 +6,20 @@ import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
     const [items, setItems] = useState({});
 
-    const {itemId} = useParams ();
+    const {detalleId} = useParams ();
 
     useEffect(() => {
         const getItems = () =>
             new Promise((resolve) => {
                setTimeout(() => {
-                    resolve(productos.find(productos=>productos.id===itemId));
+                    resolve(productos);
                 }, 500);
-              
-                
-    
+   
             });
-        getItems.then (resolve => setItems(resolve.find(productos =>productos.itemId === (itemId))))
+       getItems.then(resolve => setItems(resolve.find(productos =>productos.id === (detalleId))));
        
-    }, [itemId]);
+    }, [])
+
     return (
         <div style={{ minHeight: '70vh' }}>
             <ItemDetail items={items} />

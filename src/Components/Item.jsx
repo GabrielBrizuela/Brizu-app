@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const Item = ({nombre, image, precio}) => {
-    return (
+     return (<Link to={`/item/${Item.id}`}>
         <div className="card">
             <img src={image} className="card-img-top" alt={nombre} />
             <div className="card-body">
@@ -10,6 +11,7 @@ const Item = ({nombre, image, precio}) => {
                 <button type="button" className="btn btn-outline-primary">Ver detalles</button>
             </div>
         </div>
+        </Link>
     )
 }
 
