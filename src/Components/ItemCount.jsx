@@ -1,10 +1,11 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [cantidad, setcantidad] = useState(initial);
     const [itemStock, setItemStock] = useState(stock);
     const [itemAdd, setItemAdd] = useState(onAdd);
+
     const restarCantidad = (valor) => {
         if (valor > 0) {
             setcantidad(valor);
@@ -12,7 +13,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
 
     const aumentarCantidad = (valor) => {
-
         if (valor <= itemStock) {
             setcantidad(valor);
         }
@@ -24,7 +24,13 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             setItemAdd(itemAdd + cantidad);
         }
 
+        onAdd (cantidad)
+
     }
+
+    useEffect (()=> {
+        setcantidad (parseInt (initial));
+    }, [initial])
 
 
     return (

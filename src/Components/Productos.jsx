@@ -1,6 +1,6 @@
 export const productos = [
     {
-        id: "1",
+        id: 1,
         nombre: "Bidon 20 lts",
         precio: 550,
         stock: 10,
@@ -10,7 +10,7 @@ export const productos = [
     },
 
     {
-        id: "2",
+        id: 2,
         nombre: "Bidon 10 lts",
         precio: 300,
         stock: 15,
@@ -20,7 +20,7 @@ export const productos = [
     },
 
     {
-        id: "3",
+        id: 3,
         nombre: "Bidon 8 lts",
         precio: 250,
         stock: 9,
@@ -30,7 +30,7 @@ export const productos = [
     },
 
     {
-        id: "4",
+        id: 4,
         nombre: "Sifon plastico",
         precio: 100,
         stock: 11,
@@ -40,7 +40,7 @@ export const productos = [
     },
 
     {
-        id: "5",
+        id: 5,
         nombre: "Sifon vidrio",
         precio: 90,
         stock: 5,

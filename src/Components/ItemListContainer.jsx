@@ -17,9 +17,9 @@ const ItemListContainer = () => {
             }, 2000);
         });
         if (categoryId) {
-            getProductos.then (response => setItems(response.filter (productos=> productos.categoryId === categoryId)));
+            getProductos.then (resolve => setItems(resolve.filter (productos=> productos.categoryId === categoryId)));
         } else {
-            getProductos.then (response =>setItems(response));
+            getProductos.then (resolve =>setItems(resolve));
         }
     }, [categoryId]);
    
